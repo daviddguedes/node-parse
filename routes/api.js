@@ -7,7 +7,7 @@ dotenv.load()
 const ParseServer = require('parse-server').ParseServer;
 
 let api = new ParseServer({
-  databaseURI: 'mongodb://' + process.env.MONGO_HOST + ':' + process.env.MONGO_PORT + '/parse-docker',
+  databaseURI: 'mongodb://' + process.env.MONGO_HOST + ':' + process.env.MONGO_PORT + '/' + process.env.MONGO_DATABASE,
   cloud: './cloud/main.js',
   appId: 'appId',
   masterKey: 'masterKey', 
